@@ -1,55 +1,89 @@
-// console.log('hello world!')
+const url = "https://pokeapi.co/api/v2/pokemon/";
 
-// const url = "https://pokeapi.co/api/v2/pokemon/"
+let pikachu = document.querySelector('#acc1');
+let pokeImg = document.querySelector('.pikachupic')
 
-// //targeting the form to attach the event handler
-// const dropdown = document.querySelector('dropdown');
-// //targeting the form input to get the value to search for in the API request
-// const formInput = form.querySelector('input.pokemonName');
-// //targeting the element because i want to update with the API data
-// const pokemonh2 = document.querySelector('h2');
+pikachu.addEventListener('click', evt => {
+  evt.preventDefault()
+  let value = "pikachu"
+  console.log(url);
+  fetch(url + value)
+  .then(res => res.json())
+  .then(pokemon => {
+      console.log(pokemon.sprites.front_default)
+      const pokemonSprite = pokemon.sprites.front_default;
+      pokeImg.setAttribute('src', pokemonSprite);
+  }) .catch(err => console.log(err));
+}) 
 
-// const pokemonImg = document.querySelector('img');
 
-// //add event listener to the form 
-// dropdown.addEventListener('click', evt => {
-//     evt.preventDefault()
-//     // const value = formInput.value
-//     // console.log(value)
-//     console.log(url);
-//     console.log(url + value);
-//     fetch(url + value)
-//     .then(res => res.json())
-//     .then(pokemon => {
-//         console.log(pokemon, pokemon.name);
-//         const pokemonName = pokemon.name;
-//         const pokemonSprite = pokemon.sprites.front_default;
-//         pokemonh2.innerText = pokemonName;
-//         pokemonImg.setAttribute('src', pokemonSprite);
-//     }) .catch(err => console.log(err));
-// })
+let bulbasaur = document.querySelector('#acc2')
+let pokeImg1 = document.querySelector('.bulbpic')
 
-// const url = "https://pokeapi.co/api/v2/pokemon/pikachu";
-// // const url = "http://pokeapi.salestock.net/api/v2/pokemon/7"
-// // use second url as a backup only
-// const pikachu = document.querySelector('#pikachu');
-// const pokemonImg = document.querySelector('.pikachu')
-// const formInput = document.querySelector('input.pokemonName');
+bulbasaur.addEventListener('click', evt => {
+  evt.preventDefault()
+  let value = "bulbasaur"
+  // console.log(value)
+  console.log(url);
+  fetch(url + value)
+  .then(res => res.json())
+  .then(pokemon => {
+      console.log(pokemon.sprites.front_default)
+      const pokemonSprite = pokemon.sprites.front_default;
+      // pokemonh2.innerText = pokemonName;
+      pokeImg1.setAttribute('src', pokemonSprite);
+  }) .catch(err => console.log(err));
+})
 
-// pikachu.addEventListener('click', evt => {
-//   evt.preventDefault()
-//   // const value = formInput.value
-//   // console.log(value)
-//   console.log(url);
-//   // console.log(url + value);
-//   fetch(url)
-//   .then(res => res.json())
-//   .then(pokemon => {
-//       console.log(pokemon.sprites.front_default)
-//       const pokemonSprite = pokemon.sprites.front_default;
-//       // pokemonh2.innerText = pokemonName;
-//       pokemonImg.setAttribute('src', pokemonSprite);
-//   }) .catch(err => console.log(err));
-// }) 
+let charmander = document.querySelector('#acc3')
+let pokeImg2 = document.querySelector('.charpic')
+
+bulbasaur.addEventListener('click', evt => {
+  evt.preventDefault()
+  let value = "charmander"
+  // console.log(value)
+  console.log(url);
+  fetch(url + value)
+  .then(res => res.json())
+  .then(pokemon => {
+      console.log(pokemon.sprites.front_default)
+      const pokemonSprite = pokemon.sprites.front_default;
+      // pokemonh2.innerText = pokemonName;
+      pokeImg2.setAttribute('src', pokemonSprite);
+  }) .catch(err => console.log(err));
+})
+
+let squirtle = document.querySelector('#acc4')
+let pokeImg3 = document.querySelector('.squirtlepic')
+
+squirtle.addEventListener('click', evt => {
+  evt.preventDefault()
+  let value = "squirtle"
+  // console.log(value)
+  console.log(url);
+  fetch(url + value)
+  .then(res => res.json())
+  .then(pokemon => {
+      console.log(pokemon.sprites.front_default)
+      const pokemonSprite = pokemon.sprites.front_default;
+      // pokemonh2.innerText = pokemonName;
+      pokeImg3.setAttribute('src', pokemonSprite);
+  }) .catch(err => console.log(err));
+})
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 
 

@@ -1,8 +1,8 @@
 body {
-    background-image: url(photo-1542779283-429940ce8336.jpeg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+  background-image: url(photo-1542779283-429940ce8336.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 header {
@@ -14,70 +14,36 @@ header {
 .container {
   width: 50%;
   margin: auto;
-  padding: 180px 0 0;
+  padding: 150px 0 0;
 }
-  
-  
+
 .accordion {
-  float: left;
-  width: 100%;
-  position: relative;
-  padding-bottom: 30px;
-}
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-family: 'Muli', sans-serif;
+    opacity: 0.7;
+  }
   
-.accordion label {
-  cursor: pointer;
-  display: inline-block;
-  padding-left: 40px;
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 600;
-  color: bisque;
-  font-family: 'Muli', sans-serif;
-}
+  .active, .accordion:hover {
+    background-color: rgb(247, 128, 108); 
+  }
   
-.accordion label:before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 0;
-  border-left: 8px solid rgb(245, 99, 74);
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  margin-left: 4px;
-}
-
-.accordion .text {
-  max-height: 0;
-  overflow: hidden;
-  font-size: 20px;
-  line-height: ;
-  letter-spacing: ;
-  color: bisque;
-  padding-left: 40px;
-  font-family: 'Muli', sans-serif;
-}
-
-.accordion input[type=checkbox]:checked ~ .text {
-  max-height: 100%;
-}
-
-.accordion input[type=checkbox] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-  
-.accordion input[type=checkbox]:checked ~ label:before {
-  border-left: 8px solid transparent;
-  border-top: 8px solid rgb(245, 99, 74);
-  border-right: 8px solid transparent;
-  margin: 6px 0 0;
-}
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    font-family: 'Muli', sans-serif;
+    opacity: 0.7;
+  }
   
 
  
