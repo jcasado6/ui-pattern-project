@@ -10,7 +10,7 @@ pikachu.addEventListener('click', evt => {
   fetch(url + value)
   .then(res => res.json())
   .then(pokemon => {
-      console.log(pokemon.sprites.front_default)
+      console.log(pokemon)
       const pokemonSprite = pokemon.sprites.front_default;
       pokeImg.setAttribute('src', pokemonSprite);
   }) .catch(err => console.log(err));
